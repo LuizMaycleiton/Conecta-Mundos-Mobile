@@ -1,38 +1,115 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
-    background-color: 	#F5F5F5;
+body {
+    background-color: #F5F5F5;
+    font-family: sans-serif;
 }
 
-header{
-    padding: 0.5rem;
+header {
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
 }
 
-main{
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    width: 28px;
+    height: 3px;
+    background: #06112f;
+    -webkit-text-fill-color: initial;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #06112f;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.nav-menu a {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #00E5B6;
+}
+
+.nav-menu .nav-btn {
+    background-color: #00E5B6;
+    color: #06102b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.nav-menu .nav-btn:hover {
+    background-color: #00c9a0;
+    color: #06102b;
+}
+
+
+main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.logo img{
+.logo img {
     width: 70px;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.textos{
+.textos {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -46,14 +123,14 @@ span {
     -webkit-text-fill-color: transparent;
 }
 
-.login-rapidos{
+.login-rapidos {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-button{
+button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,28 +144,28 @@ button{
     font-weight: 500;
     color: #333;
     cursor: pointer;
-    
+
 }
 
-.icone{
+.icone {
     width: 20px;
 }
 
-.divisao{
+.divisao {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-hr{
+hr {
     background-color: black;
     width: 6rem;
     height: 0.1rem;
     border: none;
 }
 
-.formulario{
+.formulario {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +173,7 @@ hr{
     gap: 2rem;
 }
 
-input{
+input {
     width: 80%;
     padding: 0.85rem 1rem;
     height: 48px;
@@ -108,7 +185,7 @@ input{
     background-color: #fafafa;
 }
 
-.entrar{
+.entrar {
     width: 250px;
     height: 50px;
     display: flex;
