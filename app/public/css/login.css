@@ -99,7 +99,7 @@ main {
 }
 
 .logo img {
-    width: 70px;
+    width: 50px;
 }
 
 .title {
@@ -121,6 +121,12 @@ span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.logins{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .login-rapidos {

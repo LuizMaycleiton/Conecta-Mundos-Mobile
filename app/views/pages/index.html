@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Conecta Mundos</title>
 </head>
 
@@ -14,31 +15,14 @@
             <div class="logo">
                 <img class="logo-img" src="../../public/imagem/logo_degrade.png" alt="Logo Conecta Mundos">
             </div>
-
-            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="#tela-inicio">Início</a></li>
-                    <li><a href="#tela-causas">Causas</a></li>
-                    <li><a href="#ongs">ONGs</a></li>
-                    <li><a href="../../views/pages/login-pessoa.html" class="nav-btn">Login</a></li>
-                    <li><a href="../../views/pages/cadastro-ong.html" class="nav-btn">Cadastrar ONG</a></li>
-                </ul>
-            </nav>
         </header>
+
         <main>
             <div>
                 <h2 class="title">
                     Cada gesto conta. <br> <span>Comece agora.</span>
                 </h2>
-                <p class="inicio-p">Não importa o tamanho da contribuição - seja com tempo, recursos ou habilidades -
-                    você pode transformar vidas hoje.</p>
+                <p class="inicio-p">Não importa o tamanho da contribuição - seja com tempo, recursos ou habilidades - você pode transformar vidas hoje.</p>
             </div>
             <div class="botoes-hero">
                 <button class="btn-voluntario">
@@ -76,8 +60,7 @@
                 <p>Moradia</p>
             </div>
             <div class="card">
-                <div class="img-container"><img src="../../public/imagem/seguranca_img.png" alt="Direitos Humanos">
-                </div>
+                <div class="img-container"><img src="../../public/imagem/seguranca_img.png" alt="Direitos Humanos"></div>
                 <p>Direitos Humanos</p>
             </div>
             <div class="card">
@@ -99,8 +82,7 @@
         <div class="container-ongs">
             <div class="titulo-ongs">
                 <h1>ONGs que <span class="degrade-texto">transformam</span></h1>
-                <p>Conheça as organizações verificadas que estão criando impacto real em comunidades por todo o Brasil.
-                </p>
+                <p>Conheça as organizações verificadas que estão criando impacto real em comunidades por todo o Brasil.</p>
             </div>
 
             <div class="grid-ongs">
@@ -171,11 +153,8 @@
         <div class="footer-container">
             <div class="footer-coluna">
                 <h3>ConectaMundos</h3>
-                <p>Conectando quem quer ajudar a quem precisa. De forma simples e segura, você faz a diferença no mundo.
-                </p>
+                <p>Conectando quem quer ajudar a quem precisa. De forma simples e segura, você faz a diferença no mundo.</p>
             </div>
-
-            <div class="footer-bottom"></div>
 
             <div class="footer-coluna">
                 <h3>Navegação</h3>
@@ -186,8 +165,6 @@
                     <li><a href="#tela-inicio">Quero Ajudar</a></li>
                 </ul>
             </div>
-
-            <div class="footer-bottom"></div>
 
             <div class="footer-coluna">
                 <h3>Contato</h3>
@@ -205,7 +182,35 @@
         </div>
     </footer>
 
-
+    <!-- Barra de Navegação Fixa Inferior -->
+    <nav class="nav-bottom" id="nav-menu">
+        <ul>
+            <li>
+                <a href="#tela-inicio">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tela-causas">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <span>Causas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#ongs">
+                    <i class="fa-solid fa-building-ngo"></i>
+                    <span>ONGs</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../views/pages/login-pessoa.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
     <script src="../../public/js/script.js"></script>
 </body>
