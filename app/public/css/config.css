@@ -1,0 +1,215 @@
+/* =====================================================
+   config.css - cores dos temas + painel de configurações
+   Carregue em TODAS as páginas, ANTES do style.css/login.css
+   ===================================================== */
+
+/* ---------- Tema claro (padrão) ---------- */
+:root {
+    --fundo: #f8f8f8;
+    --fundo-alt: #eef2f7;
+    --superficie: #ffffff;
+    --texto: #06112f;
+    --texto-suave: #4b5563;
+    --borda: #e2e8f0;
+    --borda-campo: #cccccc;
+    --campo: #fafafa;
+    --sombra: rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Tema escuro ---------- */
+[data-tema="escuro"] {
+    --fundo: #0a1226;
+    --fundo-alt: #0e1932;
+    --superficie: #131d38;
+    --texto: #eef2ff;
+    --texto-suave: #b4bfd6;
+    --borda: #26324f;
+    --borda-campo: #3a4a6e;
+    --campo: #0e1730;
+    --sombra: rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+}
+
+/* ---------- Acessibilidade ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #4da6ff;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =====================================================
+   PAINEL DE CONFIGURAÇÕES
+   ===================================================== */
+.config {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+/* usado só na index, onde existe a barra de navegação embaixo */
+.config-com-nav {
+    bottom: 86px;
+}
+
+.config-botao {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00E5B6;
+    color: #06112f;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease;
+}
+
+.config-botao:hover {
+    transform: scale(1.08);
+}
+
+.config-painel {
+    width: 264px;
+    max-width: calc(100vw - 32px);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--superficie);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--sombra);
+}
+
+.config-painel[hidden] {
+    display: none;
+}
+
+.config-painel h3 {
+    font-size: 1.05rem;
+}
+
+.config-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.config-grupo > span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    /* cancela o degradê global dos <span> do style.css / login.css */
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: currentColor;
+}
+
+.config-linha {
+    display: flex;
+    gap: 8px;
+}
+
+.config-linha button,
+.config-restaurar {
+    flex: 1;
+    min-height: 40px;
+    padding: 6px 10px;
+    background-color: var(--campo);
+    color: var(--texto);
+    border: 1px solid var(--borda-campo);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.config-linha button:hover:not(:disabled),
+.config-restaurar:hover {
+    border-color: #00E5B6;
+}
+
+.config-linha button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* botão do tema que está ativo */
+.config-linha button[aria-pressed="true"] {
+    background-color: #00E5B6;
+    border-color: #00E5B6;
+    color: #06112f;
+}
+
+.config-valor {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+html[data-tema="escuro"] body {
+    background-color: #0a1226;
+    color: #eef2ff;
+}
+
+html[data-tema="escuro"] header {
+    background-color: #131d38;
+    border-color: #26324f;
+}
+
+html[data-tema="escuro"] .title h2,
+html[data-tema="escuro"] .link-secundario,
+html[data-tema="escuro"] legend,
+html[data-tema="escuro"] .campo label,
+html[data-tema="escuro"] .logins a {
+    color: #eef2ff;
+}
+
+html[data-tema="escuro"] .subtitulo,
+html[data-tema="escuro"] .logins,
+html[data-tema="escuro"] .divisao {
+    color: #b4bfd6;
+}
+
+html[data-tema="escuro"] .btn-voltar,
+html[data-tema="escuro"] .login-btn,
+html[data-tema="escuro"] fieldset {
+    background-color: #131d38;
+    border-color: #3a4a6e;
+    color: #eef2ff;
+}
+
+html[data-tema="escuro"] input,
+html[data-tema="escuro"] select,
+html[data-tema="escuro"] textarea {
+    background-color: #0e1730;
+    border-color: #3a4a6e;
+    color: #eef2ff;
+}
+
+html[data-tema="escuro"] hr {
+    background-color: #3a4a6e;
+}

@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/config.css">
     <link rel="stylesheet" href="../../public/css/login.css">
-    <title>Login Conecta Mundos</title>
+    <title>Login ONG - Conecta Mundos</title>
+    <script src="../../public/js/config.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="../../views/pages/index.html"><img src="../../public/imagem/logo_degrade.png" alt="Logo Conecta Mundos">
-        </div></a>
-        <div class="navegacao">
-
+            <a href="../../views/pages/index.html">
+                <img src="../../public/imagem/logo_degrade.png" alt="Logo Conecta Mundos">
+            </a>
         </div>
-
+        <div class="navegacao">
+            <a href="./login-pessoa.html" class="btn-voltar">← Voltar</a>
+        </div>
     </header>
 
     <main>
@@ -26,12 +29,19 @@
             </div>
             <div class="logins">
                 <p>Ainda não tem uma conta? <span><a href="./cadastro-ong.html">Cadastre-se</a></span></p>
+                <p>É voluntário ou apoiador? <span><a href="./login-pessoa.html">Entrar como pessoa</a></span></p>
             </div>
         </div>
 
         <div class="login-rapidos">
-            <button><img class="icone" src="../../public/imagem/google (1).png" alt="icone">Google</button>
-            <button> <img class="icone" src="../../public/imagem/facebook.png" alt="icone">Facebook</button>
+            <button type="button" class="login-btn">
+                <img class="icone" src="../../public/imagem/google (1).png" alt="Ícone Google">
+                Google
+            </button>
+            <button type="button" class="login-btn">
+                <img class="icone" src="../../public/imagem/facebook.png" alt="Ícone Facebook">
+                Facebook
+            </button>
         </div>
 
         <div class="divisao">
@@ -40,19 +50,50 @@
             <hr>
         </div>
 
+        <form class="formulario" action="#" method="POST">
+            <div class="campo">
+                <label for="email-ong">E-mail institucional</label>
+                <input type="email" id="email-ong" name="email" placeholder="Digite seu e-mail" required>
+            </div>
 
-        <div class="formulario">
-
-            <input type="text" placeholder="Digite seu e-mail">
-            <input type="password" placeholder="Digite sua senha">
-
+            <div class="campo">
+                <label for="senha-ong">Senha</label>
+                <input type="password" id="senha-ong" name="senha" placeholder="Digite sua senha" required>
+            </div>
 
             <div class="botao">
-                <button class="entrar">Entrar</button>
+                <button type="submit" class="entrar">Entrar</button>
             </div>
-        </div>
+        </form>
     </main>
 
+    <!-- Configurações (fonte e tema) -->
+    <div class="config">
+        <div class="config-painel" id="config-painel" hidden>
+            <h3>Configurações</h3>
+
+            <div class="config-grupo">
+                <span>Tamanho da fonte</span>
+                <div class="config-linha">
+                    <button type="button" id="fonte-menos" aria-label="Diminuir fonte">A−</button>
+                    <div class="config-valor" id="fonte-valor" aria-live="polite">100%</div>
+                    <button type="button" id="fonte-mais" aria-label="Aumentar fonte">A+</button>
+                </div>
+            </div>
+
+            <div class="config-grupo">
+                <span>Tema</span>
+                <div class="config-linha">
+                    <button type="button" id="tema-claro">☀ Claro</button>
+                    <button type="button" id="tema-escuro">🌙 Escuro</button>
+                </div>
+            </div>
+
+            <button type="button" class="config-restaurar" id="config-restaurar">Restaurar padrão</button>
+        </div>
+
+        <button type="button" class="config-botao" id="config-abrir" aria-label="Abrir configurações" aria-expanded="false" aria-controls="config-painel">⚙</button>
+    </div>
 </body>
 
 </html>

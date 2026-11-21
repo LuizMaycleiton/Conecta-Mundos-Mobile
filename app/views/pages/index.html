@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/config.css">
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Conecta Mundos</title>
+    <script src="../../public/js/config.js"></script>
 </head>
 
 <body>
@@ -25,13 +27,13 @@
                 <p class="inicio-p">Não importa o tamanho da contribuição - seja com tempo, recursos ou habilidades - você pode transformar vidas hoje.</p>
             </div>
             <div class="botoes-hero">
-                <button class="btn-voluntario">
+                <a href="./login-pessoa.html" class="btn-voluntario">
                     <img class="coracao-icone" src="../../public/imagem/coracao.png" alt="">
                     Quero Ser Voluntário
-                </button>
-                <button class="btn-explorar">
+                </a>
+                <a href="#ongs" class="btn-explorar">
                     Explorar ONGs <span class="seta">→</span>
-                </button>
+                </a>
             </div>
         </main>
     </section>
@@ -211,6 +213,35 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Configurações (fonte e tema) -->
+    <!-- Na index usa "config-com-nav" para ficar acima da barra inferior -->
+    <div class="config config-com-nav">
+        <div class="config-painel" id="config-painel" hidden>
+            <h3>Configurações</h3>
+
+            <div class="config-grupo">
+                <span>Tamanho da fonte</span>
+                <div class="config-linha">
+                    <button type="button" id="fonte-menos" aria-label="Diminuir fonte">A−</button>
+                    <div class="config-valor" id="fonte-valor" aria-live="polite">100%</div>
+                    <button type="button" id="fonte-mais" aria-label="Aumentar fonte">A+</button>
+                </div>
+            </div>
+
+            <div class="config-grupo">
+                <span>Tema</span>
+                <div class="config-linha">
+                    <button type="button" id="tema-claro">☀ Claro</button>
+                    <button type="button" id="tema-escuro">🌙 Escuro</button>
+                </div>
+            </div>
+
+            <button type="button" class="config-restaurar" id="config-restaurar">Restaurar padrão</button>
+        </div>
+
+        <button type="button" class="config-botao" id="config-abrir" aria-label="Abrir configurações" aria-expanded="false" aria-controls="config-painel">⚙</button>
+    </div>
 
     <script src="../../public/js/script.js"></script>
 </body>

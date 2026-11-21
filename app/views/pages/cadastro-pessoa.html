@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/login.css">
-    <title>Login Conecta Mundos</title>
+    <title>Cadastro - Conecta Mundos</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="../../views/pages/index.html"><img src="../../public/imagem/logo_degrade.png" alt="Logo Conecta Mundos"></a>
+            <a href="../../views/pages/index.html">
+                <img src="../../public/imagem/logo_degrade.png" alt="Logo Conecta Mundos">
+            </a>
         </div>
         <div class="navegacao">
-
+            <a href="./login-pessoa.html" class="btn-voltar">← Voltar</a>
         </div>
-
     </header>
 
     <main>
@@ -24,24 +25,40 @@
             <div class="title">
                 <h2><span>Cadastre-se</span> agora!</h2>
             </div>
+            <p class="subtitulo">Crie sua conta para apoiar causas e participar de ações voluntárias.</p>
         </div>
 
-        <div class="formulario">
+        <form class="formulario" action="#" method="POST">
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
 
-            <input type="text" placeholder="Digite seu nome">
-            <input type="text" placeholder="Digite o seu CPF">
-            <input type="text" placeholder="Digite seu telefone">
-            <input type="text" placeholder="Digite seu e-mail">
-            <input type="password" placeholder="Digite sua senha">
+            <div class="campo">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF" required>
+            </div>
 
+            <div class="campo">
+                <label for="telefone-pessoa">Telefone</label>
+                <input type="tel" id="telefone-pessoa" name="telefone" placeholder="Digite seu telefone" required>
+            </div>
+
+            <div class="campo">
+                <label for="email-pessoa">E-mail</label>
+                <input type="email" id="email-pessoa" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="campo">
+                <label for="senha-pessoa">Senha</label>
+                <input type="password" id="senha-pessoa" name="senha" placeholder="Digite sua senha" required>
+            </div>
 
             <div class="botao">
-                <button class="entrar">Cadastrar</button>
+                <button type="submit" class="entrar">Cadastrar</button>
             </div>
-        </div>
-
+        </form>
     </main>
-
 </body>
 
 </html>
