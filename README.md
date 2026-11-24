@@ -1,4 +1,4 @@
-﻿#  Conecta Mundos
+﻿# 🌍  Conecta Mundos
 
 > *"Cada gesto conta. Comece agora."*
 
